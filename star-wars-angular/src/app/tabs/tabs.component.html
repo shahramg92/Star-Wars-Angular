@@ -1,16 +1,12 @@
 <div>
   <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" href="#">All</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Light</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Dark</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Other Stuff</a>
-  </li>
-</ul>
+    <li role="presentation">
+      <a (click)="onChoose('all')" style="cursor: pointer">All</a>
+    </li>
+    <li role="presentation">
+      <a (click)="onChoose('light')" style="cursor: pointer">Light</a></li>
+    <li role="presentation">
+      <a (click)="onChoose('dark')" style="cursor: pointer">Dark</a></li>
+  </ul>
+  <app-list [characters]="getCharacters()"></app-list>
 </div>
